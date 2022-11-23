@@ -1,8 +1,6 @@
 
 pipeline{
-    agent {
-        label 'MVN3'
-    }
+    agent any
     stages{
         stage('clone'){
             steps{
@@ -36,7 +34,7 @@ pipeline{
 }
 
 pipeline {
-    agent {label 'OPENJDK-11-JDK'}
+    agent any
     triggers {
         pollSCM('0 17 * * *')
     }
