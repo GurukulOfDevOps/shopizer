@@ -18,7 +18,7 @@ pipeline{
         stage('Build the Code') {
             steps {
                 withSonarQubeEnv('sonarcloud') {
-                    sh script: 'mvn clean package sonar:sonar'
+                    sh script: 'mvn clean package sonar:sonar' }
                 }
             }
         stage('archiving-artifacts'){
