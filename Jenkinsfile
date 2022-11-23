@@ -10,7 +10,7 @@ pipeline{
         }
         stage ('build') {
             steps {
-               sh 'mvn clean package sm-shop/pom.xml'
+               sh 'mvn clean package -f sm-shop/pom.xml'
            }
         }
         stage('Build the Code') {
