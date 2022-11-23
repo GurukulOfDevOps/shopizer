@@ -18,7 +18,8 @@ pipeline{
         stage('Build the Code') {
             steps {
                 withSonarQubeEnv('sonarcloud') {
-                    sh script: 'mvn clean package sonar:sonar' }
+                    sh script: 'mvn clean package sonar:sonar' 
+                   }
                 }
             }
         stage('archiving-artifacts'){
@@ -42,7 +43,7 @@ pipeline {
         stage('vcs') {
             steps {
                 git branch: 'release', url: 'https://github.com/longflewtinku/shopizer.git'         
-            }
+             }
         }
         stage('merge') {
             steps {
