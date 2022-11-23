@@ -32,7 +32,8 @@ pipeline{
                 junit '**/surefire-reports/*.xml'
             }
         }
-    }    
+    }
+}
 
 pipeline {
     agent {label 'OPENJDK-11-JDK'}
@@ -57,5 +58,4 @@ pipeline {
             }
         }
     }
-}
 }
